@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Back Up and Restore" verbose="2">
+    <test name="Back Up and Restore" parallel="tests" >
+        <classes>
+            <class name="com.hust.testcases.BackUpAndRestoreTestFlow"/>
+        </classes>
+    </test>
+</suite>
