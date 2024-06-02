@@ -52,33 +52,6 @@
 ### Test Scenario: Purchase a Product in Sauce Labs Mobile Application
 #### ✅ End To End Test Cases
 
-1.User opens the Sauce Labs mobile application.
-
-2.User clicks on the "Menu" button.
-
-3.User clicks on the "Login" option.
-
-4.User logs in using a valid email and password.
-
-5.User chooses a product to purchase.
-
-6.User clicks on the "Counter Plus" button to add the selected product to the cart.
-
-7.User clicks on the "Add to Cart" button to confirm the product addition.
-
-8.User clicks on the "Cart Badge" icon to view the shopping cart.
-
-9.User clicks on the "Proceed to Checkout" button.
-
-10.User fills in the required checkout information.
-
-11.User fills in the payment information.
-
-12.User clicks on the "Place Order" button to complete the purchase.
-
-13.User clicks on the "Continue Shopping" button.
-
-14.Validate that the user returns to the home screen.
 
 
 
