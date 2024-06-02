@@ -1,1 +1,1 @@
-# AutomationFrameworkAppium
+# AutomationFrameworkAppiumTestNG
