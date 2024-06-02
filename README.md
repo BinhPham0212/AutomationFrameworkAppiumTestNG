@@ -1,9 +1,7 @@
 <div align="center">
  
  #  *Mobile Test Automation with Appium 2* 
-## 📱   End To End Test Order Scenario on Android App called *"Sauce labs"*  📱
-
-![img.png](img.png)
+## 📱   End To End Dolphin Application  📱
 
  </div>
  
