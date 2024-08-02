@@ -41,7 +41,7 @@ public class SearchScreen extends CommonDolphin {
         setText("id", inputSearch,"https://test");
         clickElement("id",iconSearch);
         String webPageNotAvaible = "//android.widget.TextView[@text=\"Webpage not available\"]";
-        verifyEquals(getWebElements("xpath",webPageNotAvaible),"Webpage not available", "URL exists");
+        verifyEquals(getWebElement("xpath",webPageNotAvaible),"Webpage not available", "URL exists");
         return this;
     }
 
@@ -51,7 +51,7 @@ public class SearchScreen extends CommonDolphin {
         clickElement("id", searchBox);
         setText("id", inputSearch,keywordSearch);
         waitForElementVisible("xpath",keySuggestion);
-        WebElement element = getWebElements("xpath",keySuggestion);
+        WebElement element = getWebElement("xpath",keySuggestion);
         String textAttribute = element.getAttribute("text");
         sleep(2);
 //        String webPageNotAvaible = "//android.widget.TextView[@text=\"Webpage not available\"]";

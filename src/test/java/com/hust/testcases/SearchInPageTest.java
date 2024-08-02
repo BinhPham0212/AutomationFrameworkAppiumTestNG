@@ -58,6 +58,6 @@ public class SearchInPageTest extends BaseTest {
                 verifySearchText("ha noi").
                 clickIconCancel().
                 waitForElementNotVisible();
-
     }
+
 }

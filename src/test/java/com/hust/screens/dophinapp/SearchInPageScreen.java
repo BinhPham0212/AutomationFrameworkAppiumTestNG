@@ -5,7 +5,11 @@ import com.hust.screens.CommonDolphin;
 import com.hust.utils.logs.LogUtils;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+import java.sql.Driver;
 
 import static com.hust.keywords.MobileUI.*;
 
@@ -66,7 +70,7 @@ public class SearchInPageScreen extends CommonDolphin {
     @Step("Verify search Text {0}")
     public SearchInPageScreen verifySearchText(String searchText) {
         sleep(3);
-        String totalMatche = getWebElements("xpath",totalMatches).getText();
+        String totalMatche = getWebElement("xpath",totalMatches).getText();
         LogUtils.info("Total matching with "+searchText+": " +totalMatche);
 
         return this;
@@ -95,8 +99,5 @@ public class SearchInPageScreen extends CommonDolphin {
         LogUtils.info("Click icon cancel");
         return this;
     }
-
-
-
 
 }

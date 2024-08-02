@@ -1,8 +1,6 @@
 package com.hust.screens.dophinapp;
 
 import com.hust.screens.CommonDolphin;
-import com.hust.screens.demoapp.LoginScreen;
-import com.hust.screens.demoapp.ProductsScreen;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidBy;

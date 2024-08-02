@@ -8,9 +8,15 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.testng.annotations.*;
+import org.w3c.dom.Document;
+import org.xml.sax.InputSource;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import static com.hust.keywords.MobileUI.sleep;
 
 @Listeners({TestListener.class})
 public class BaseTest {
@@ -32,11 +38,6 @@ public class BaseTest {
         service = AppiumDriverLocalService.buildService(builder);
         service.start();
 
-//        service = AppiumDriverLocalService.buildDefaultService();
-////        service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\votha\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")).withTimeout(Duration.ofSeconds(120))
-//        service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\binhp\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")).withTimeout(Duration.ofSeconds(120))
-//                .withIPAddress("127.0.0.1").usingPort(4723).build();
-//        service.start();
     }
 
 //    @BeforeClass
@@ -49,11 +50,6 @@ public class BaseTest {
         option.setAppPackage(System.getProperty("androidAppPackage"));
         option.autoGrantPermissions();    //Auto permission for location and library
         option.setAppActivity(System.getProperty("androidAppActivity"));
-
-//        option.setApp("D://BinhAT//Appium Automation//src//test//resources//app//DolphinBrowser.apk");
-//        option.setApp("D:\\BinhAT\\Appium Automation\\src\\test\\resources\\app\\DolphinBrowser.apk");
-//        mobi.mgeek.TunnyBrowser/mobi.mgeek.TunnyBrowser.BrowserActivity
-
         option.setApp(SystemsHelper.getCurrentDir() + "\\src\\test\\resources\\app\\DolphinBrowser.apk");
     }
 
@@ -73,4 +69,5 @@ public class BaseTest {
     public void stopServer() {
         service.stop();
     }
+
 }

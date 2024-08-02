@@ -1,0 +1,1 @@
+{"uuid":"c940eca6-e80d-4f53-a874-bea06f37ca2a","name":"AutomationFrameworkAppiumTestNG","children":["0fb34705-8ade-4404-a0ed-7a716387a057"],"befores":[{"name":"RunApplication","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1718455631059,"stop":1718455631554}],"afters":[],"start":1718455631054,"stop":1718455687828}

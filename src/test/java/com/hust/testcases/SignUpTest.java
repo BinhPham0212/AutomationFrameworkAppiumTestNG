@@ -1,11 +1,23 @@
 package com.hust.testcases;
 
 import com.hust.common.BaseTest;
+import com.hust.driver.DriverManager;
 import com.hust.helpers.JsonHelper;
 import com.hust.screens.dophinapp.HomeScreen;
 import com.hust.screens.dophinapp.SignInScreen;
 import com.hust.screens.dophinapp.SignUpScreen;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+import org.w3c.dom.Document;
+import org.xml.sax.InputSource;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import static com.hust.keywords.MobileUI.sleep;
 
 public class SignUpTest extends BaseTest {
 
@@ -38,7 +50,7 @@ public class SignUpTest extends BaseTest {
                 verifySignUpScreen().
                 inputEmailPassword("emailnull","password").
                 clickButtonRegister().
-                verifyWarningEmailMessage();
+                verifyEmailNull();
 
     }
 
@@ -53,11 +65,13 @@ public class SignUpTest extends BaseTest {
                 clickButtonSignUp();
         new SignUpScreen().
                 verifySignUpScreen().
-                inputEmailPassword("email","passwordnull").
+                inputEmailPassword("email", "passwordnull").
                 clickButtonRegister().
-                verifyWarningEmailMessage();
+                verifyPasswordNull();
 
     }
+
+
 
     @Test(priority = 3)
     public void TC_signUpNOTSuccessfullWithInvalidEmail() {
@@ -72,7 +86,7 @@ public class SignUpTest extends BaseTest {
                 verifySignUpScreen().
                 inputEmailPassword("invalidemail","password").
                 clickButtonRegister().
-                verifyWarningEmailMessage();
+                verifyInvalidEmailMessage();
 
     }
 }
